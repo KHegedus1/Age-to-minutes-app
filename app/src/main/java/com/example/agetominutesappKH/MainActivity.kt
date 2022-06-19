@@ -5,10 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.DatePicker
+import android.widget.TextView
 import android.widget.Toast
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
+    val tvSelectedDate : TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             view,year, month,dayOfMonth ->
         },year,month,day)
         Toast.makeText(this,
-            "year was $year,month was ${month+1} ", Toast.LENGTH_LONG).show()
+            "year was $year,month was ${month+1},day of month was $dayOfMonth", Toast.LENGTH_LONG).show()
     },
     year,
     month,

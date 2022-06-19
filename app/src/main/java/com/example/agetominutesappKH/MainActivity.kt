@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             view,year, month,dayOfMonth ->
         },year,month,day)
         Toast.makeText(this,
-            "year was $year,month was $month ", Toast.LENGTH_LONG).show()
+            "year was $year,month was ${month+1} ", Toast.LENGTH_LONG).show()
     },
     year,
     month,

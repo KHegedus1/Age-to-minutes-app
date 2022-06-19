@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val btnDatePicker : Button = findViewById(R.id.btnDatePicker)
+        tvSelectedDate = findViewById(R.id.tvSelectedDate)
         btnDatePicker.setOnClickListener{
             clickDatePicker()
         }
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity() {
         },year,month,day)
         Toast.makeText(this,
             "year was $year,month was ${month+1},day of month was $dayOfMonth", Toast.LENGTH_LONG).show()
+        val SelectedDayOfMonth = ""
+        val SelectedMonth
+        val SelectedYear
+        val selectedDate = "$SelectedDayOfMonth/${SelectedMonth+1}/$SelectedYear "
+        tvSelectedDate?.text = selectedDate
     },
     year,
     month,

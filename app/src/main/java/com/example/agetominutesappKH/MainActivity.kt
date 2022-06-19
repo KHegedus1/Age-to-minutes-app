@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             view,year, month,dayOfMonth ->
         },year,month,day)
         Toast.makeText(this,
-            "datepicker works", Toast.LENGTH_LONG).show()
+            "year was $year,month was $month ", Toast.LENGTH_LONG).show()
     },
     year,
     month,

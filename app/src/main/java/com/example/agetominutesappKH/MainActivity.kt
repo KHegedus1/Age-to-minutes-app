@@ -30,10 +30,9 @@ class MainActivity : AppCompatActivity() {
         val year = myCalendar.get(Calendar.YEAR)
         val month = myCalendar.get(Calendar.MONTH)
         val day = myCalendar.get(Calendar.DAY_OF_MONTH)
-        DatePickerDialog(this,
-        DatePickerDialog.OnDateSetListener{
+        val dpd = DatePickerDialog(this,
+        {
             view,year, month,dayOfMonth ->
-        },year,month,day)
         Toast.makeText(this,
             "year was $year,month was ${month+1},day of month was $dayOfMonth", Toast.LENGTH_LONG).show()
         val SelectedDayOfMonth = ""

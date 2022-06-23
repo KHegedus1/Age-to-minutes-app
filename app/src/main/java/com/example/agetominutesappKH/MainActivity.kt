@@ -12,6 +12,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
+    private val currentDate : TextView? = null
     private var tvSelectedDate : TextView? = null
     private var tvAgeInMinutes : TextView? = null
 
@@ -47,16 +48,18 @@ class MainActivity : AppCompatActivity() {
                 val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
 
                 val theDate = sdf.parse(selectedDate)
+                theDate?.let {
 
-                val selectedDateInMinutes = theDate.time / 60000
+                    val selectedDateInMinutes = theDate.time / 60000
 
-                val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
+                    val currentDate = sdf.parse(sdf.format(System.currentTimeMillis())
+                currentDate?.let{
+                    val currentDateInMinutes = currentDate.time / 60000
 
-                val currentDateInMinutes = currentDate.time / 60000
+                    val differenceInMinutes = currentDate - selectedDateInMinutes
 
-                val differenceInMinutes = currentDate - selectedDateInMinutes
-
-                tvAgeInMinutes?.text = differenceInMinutes.toString()
+                    tvAgeInMinutes?.text = differenceInMinutes.toString()
+                }}
             },
             year,
             month,

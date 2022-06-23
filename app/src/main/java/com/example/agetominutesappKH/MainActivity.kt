@@ -13,13 +13,14 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private var tvSelectedDate : TextView? = null
-    private var
+    private var tvAgeInMinutes : TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val btnDatePicker : Button = findViewById(R.id.btnDatePicker)
         tvSelectedDate = findViewById(R.id.tvSelectedDate)
+        tvAgeInMinutes = findViewById(R.id.tvAgeInMinutes)
         btnDatePicker.setOnClickListener{
             clickDatePicker()
         }

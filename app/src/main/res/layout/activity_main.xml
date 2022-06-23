@@ -101,12 +101,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.029" />
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="3333333333"
         android:textColor="@android:color/holo_red_dark"
-        android:id="@+id/tvSelectedDate"
+        android:id="@+id/tvAgeInMinutes"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

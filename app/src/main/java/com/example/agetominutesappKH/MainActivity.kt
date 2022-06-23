@@ -12,7 +12,8 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    val tvSelectedDate : TextView? = null
+    private var tvSelectedDate : TextView? = null
+    private var
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
